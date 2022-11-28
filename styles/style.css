@@ -7,6 +7,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #000000;
 }
 
 .header {
@@ -23,7 +24,7 @@
   height: 32px;
   width: 228px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 30px;
   left: 64px;
 }
@@ -36,6 +37,7 @@
   width: 730px;
   display: flex;
   position: relative;
+  z-index: 2;
   flex-direction: column;
   justify-content: center;
   left: 64px;
@@ -47,6 +49,7 @@
 .header__subtitle {
   width: 388px;
   position: absolute;
+  z-index: 2;
   left: 64px;
   bottom: 30px;
   line-height: 25px;
@@ -73,6 +76,7 @@
   height: 568px;
   width: 568px;
   position: absolute;
+  z-index: 0;
   top: 64px;
   right: 0;
   background-color: #2f80ed;
@@ -126,6 +130,8 @@
 
 .section-title {
   width: 60%;
+  position: relative;
+  z-index: 1;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
@@ -135,6 +141,8 @@
 
 .section-subtitle {
   width: 60%;
+  position: relative;
+  z-index: 1;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
@@ -255,16 +263,23 @@
 
 .footer {
   min-height: 350px;
+  display: flex;
   position: relative;
   padding: 60px 0 40px;
   background-color: #1f1f1f;
 }
 
 .footer__columns {
+  min-height: 250px;
   width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column_content_copyright {
@@ -273,13 +288,16 @@
 
 .logo_place_footer {
   background-image: url(../../images/logo_place_footer.svg);
+  top: 60px;
 }
 
 .footer__author {
+  position: absolute;
+  left: 64px;
+  bottom: 58px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  margin: 18px 0;
   color: white;
 }
 
@@ -302,7 +320,7 @@
   font-weight: normal;
   list-style-type: none;
   text-decoration: none;
-  margin: 0 0 16 px;
+  margin: 0 0 16px;
   color: white;
 }
 
