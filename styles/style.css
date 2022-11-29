@@ -23,13 +23,13 @@
 .logo {
   height: 32px;
   width: 228px;
+}
+
+.logo_place_header {
   position: absolute;
   z-index: 2;
   top: 30px;
   left: 64px;
-}
-
-.logo_place_header {
   background-image: url(../../images/logo_place_header.svg);
 }
 
@@ -55,6 +55,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin: 0;
 }
 
 .header__link {
@@ -180,7 +181,7 @@
 }
 
 .feynman {
-  height:  890px;
+  min-height:  890px;
   position: relative;
   background-color: #f2f2f2;
 }
@@ -259,12 +260,15 @@
   z-index: 0;
   top: 0;
   right: -210px;
+  background-image: url(../../images/kaufman-triangle.svg);
+  background-size: contain;
 }
 
 .footer {
   min-height: 350px;
   display: flex;
   position: relative;
+  box-sizing: border-box;
   padding: 60px 0 40px;
   background-color: #1f1f1f;
 }
@@ -283,25 +287,25 @@
 }
 
 .footer__column_content_copyright {
+  justify-content: space-between;
   flex-basis: 711px;
 }
 
 .logo_place_footer {
   background-image: url(../../images/logo_place_footer.svg);
-  top: 60px;
 }
 
 .footer__author {
-  position: absolute;
-  left: 64px;
-  bottom: 58px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin: 18px 0;
+  padding: 0;
   color: white;
 }
 
 .footer__column-links {
+  list-style-type: none;
   margin: 20px 0 16px;
   padding: 0;
 }
@@ -318,7 +322,6 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  list-style-type: none;
   text-decoration: none;
   margin: 0 0 16px;
   color: white;
