@@ -2,6 +2,7 @@
   height: 608px;
   width: 765px;
   position: absolute;
+  object-fit: cover;
   z-index: 1;
   right: 0;
   bottom: 0;
